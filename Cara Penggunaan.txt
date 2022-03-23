@@ -1,0 +1,45 @@
+CARA PENGGUNAAN SISTEM:
+
+Pemasangan Aplikasi Pendukung
+1. Install Aplikasi XAMPP Versi 7.4.4 atau versi diatasnya 
+   (agar bisa mendeteksi PHP Versi 7 yang digunakan) yang 
+   tersedia di folder APLIKASI PENDUKUNG.
+2. Setelah XAMPP di install pastikan di drive C: sudah 
+   terdapat folder xampp->htdocs
+
+Persiapan Database
+1. Buka browser dan ketikkan: http://localhost/phpmyadmin
+2. Buat database baru dan beri nama ta
+   (nama wajib sama)
+3. Setelah database terbuat, selanjutnya pilih database yang
+   baru dibuat (ta), lalu klik import.
+4. Setelah itu akan terbuka jendela open file, maka 
+   selanjutnya cari dan pilih folder DATABASE lalu pilih 
+   database galeri_umkm.sql yang tersedia dalam folder
+   DATABASE, lalu klik Go/Kirim.
+5. Tunggu sampai berhasil import, dan pastikan import berhasil
+   dan data-data masuk ke database.
+
+Pemindahan Sumber dan Pemakaian Sistem
+1. Setelah aplikasi pendukung terinstall dan database sudah
+   disiapkan, selanjutnya salin folder TA yang ada di
+   dalam folder SUMBER ke drive C: -> xampp -> htdocs 
+   (paste didalam htdocs - WAJIB!!!)
+2. Setelah selesai pemindahan, buka browser lalu ketikkan pada
+   tab address: http://localhost/TA
+
+Hak akses (login):
+1. Admin
+   Username: papuamusic@gmail.com
+   Password: 11223344
+
+2. Pelanggan (yang sudah mendaftar)
+   Username: zam.bosawer@gmail.com
+   Password: 11223344
+
+3. Pemilik Tempat Penyewaan (yang sudah mendaftar)
+   Username: yapo22@gmail.com
+   Password: 11223344
+
+Catatan:
+Untuk pengguna baru harus melakukan pendaftaran terlebih dahulu untuk mendapatkan username dan password agar dapat login kedalam sistem.

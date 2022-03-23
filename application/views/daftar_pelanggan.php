@@ -1,0 +1,101 @@
+<div id="app">
+    <section class="section">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+                    <?= $this->session->flashdata('pesan');
+                    $this->session->set_flashdata('pesan', '');
+                    ?>
+
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h4 class="text-center" style="margin: auto;">Buat Akun <br> Sebagai Pelanggan</h4>
+                        </div>
+                        <div class=" card-body">
+                            <form method="POST" action="<?= base_url() ?>auth/aksi_daftar_pelanggan" enctype="multipart/form-data">
+                                <?php
+                                error_reporting(0);
+                                if ($kode->id_pelanggan != null) {
+                                    $id_pelanggan = $kode->id_pelanggan;
+                                } else {
+                                    $id_pelanggan = "plg-0000";
+                                }
+                                $no_urut = (int)substr($id_pelanggan, 4, 4);
+                                $no_urut++;
+                                $id = "plg-";
+                                $id_baru = $id . sprintf("%04s", $no_urut);
+                                ?>
+                                <input type="hidden" name="id_pelanggan" value="<?= $id_baru ?>">
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="">Nama</label>
+                                        <input id="" type="text" class="form-control" name="nama">
+                                        <?= form_error('nama', '<div class = "text-small text-danger">', ' </div>'); ?>
+
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="">Alamat Distrik</label>
+                                        <select class="form-control" name="alamat_distrik" id="">
+                                            <option value=""> Pilih Distrik</option>
+                                            <option value="Jayapura Utara"> Jayapura Utara </option>
+                                            <option value="Jayapura Selatan"> Jayapura Selatan </option>
+                                            <option value="Abepura"> Abepura </option>
+                                            <option value="Muara Tami">Muara Tami</option>
+                                            <option value="Heram">Heram</option>
+                                        </select>
+                                        <?= form_error('alamat_distrik', '<div class = "text-small text-danger">', ' </div>'); ?>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Alamat Jalan</label>
+                                    <input id="" type="" class="form-control" name="alamat_jalan">
+                                    <?= form_error('alamat_jalan', '<div class = "text-small text-danger">', ' </div>'); ?>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="">Nomor Handphone</label>
+                                        <input id="" type="text" class="form-control" name="nm_hp">
+                                        <?= form_error('nm_hp', '<div class = "text-small text-danger">', ' </div>'); ?>
+
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="">Email</label>
+                                        <input id="" type="text" class="form-control" name="email">
+                                        <?= form_error('email', '<div class = "text-small text-danger">', ' </div>'); ?>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label for="">KTP (JPG/PNG)</label>
+                                        <input id="" type="file" required class="form-control" name="ktp">
+
+
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <label for="">Foto Profile (JPG/PNG)</label>
+                                        <input id="" type="file" required class="form-control" name="foto">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="">Password</label>
+                                        <input id="" type="password" class="form-control" name="password">
+                                        <?= form_error('password', '<div class = "text-small text-danger">', ' </div>'); ?>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="">Ulangi Password</label>
+                                        <input id="" type="password" class="form-control" name="ulangi_password">
+                                        <?= form_error('ulangi_password', '<div class = "text-small text-danger">', ' </div>'); ?>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                        Daftar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
